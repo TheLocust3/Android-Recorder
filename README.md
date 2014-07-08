@@ -25,7 +25,8 @@ To use this script you must have ruby installed and the Android ADT bundle:
 
 There are a million ways to install ruby so head over to https://www.ruby-lang.org/en/installation/ for details  
 
-To get ADB download it from http://developer.android.com/sdk/index.html?hl=sk and follow the instructions to install itADB MUST be added to your path for this program to execute  
+To get ADB download it from http://developer.android.com/sdk/index.html?hl=sk and follow the instructions to install it  
+ADB MUST be added to your path for this program to execute  
 
 After you have completed the steps above just run the command:  
 ```
