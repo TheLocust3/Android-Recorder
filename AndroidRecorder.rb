@@ -3,15 +3,23 @@ require 'fileutils'
 puts "Name of output recording: "
 name = gets.chomp
 
-i = 0
+while (File.exists?("Output/" + name + ".mp4") == true)
+	puts "That name is already taken. Try again: "
+	name = gets.chomp
+end
+
+i = 1
 record = 0
 system("mkdir Output")
 system("mkdir tmp")
 
 begin
 	system('adb shell "mkdir /sdcard/Recordings"')
+	puts "New recording started"
 	record = system("adb shell screenrecord /sdcard/Recordings/recording0.mp4 --bit-rate 6000000 --rotate --time-limit 1")
 	spawn("adb pull /sdcard/Recordings/recording0.mp4 tmp/")
+	record = system("adb shell screenrecord /sdcard/Recordings/recording1.mp4 --bit-rate 6000000 --rotate --time-limit 1")
+	spawn("adb pull /sdcard/Recordings/recording1.mp4 tmp/")
 
 	while true
 		i += 1
