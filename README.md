@@ -1,10 +1,10 @@
 Android Screen Recorder
-    Copyright (C) 2014  Jake Kinsella
+Copyright (C) 2014  Jake Kinsella
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,11 +21,11 @@ Operating Systems that are compatible with this script:
 	All operating systems with a unix-based kernal?
 	NOT WINDOWS (Sorry!)
 
-To use this script you must have ruby installed and the Android ADT bundle
-	There are a million ways to install ruby so head over to https://www.ruby-lang.org/en/installation/ for details
+To use this script you must have ruby installed and the Android ADT bundle:
 
-	To get ADB download it from http://developer.android.com/sdk/index.html?hl=sk and follow the instructions to install it
-	ADB MUST be added to your path for this program to execute
+There are a million ways to install ruby so head over to https://www.ruby-lang.org/en/installation/ for details
+
+To get ADB download it from http://developer.android.com/sdk/index.html?hl=sk and follow the instructions to install itADB MUST be added to your path for this program to execute
 
 After you have completed the steps above just run the command: ruby AndroidRecorder.rb
 
