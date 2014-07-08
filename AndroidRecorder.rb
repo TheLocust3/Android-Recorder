@@ -3,15 +3,19 @@ require 'fileutils'
 puts "Name of output recording: "
 name = gets.chomp
 
-i = -1
+i = 0
 record = 0
+system("mkdir Output")
+system("mkdir tmp")
 
 begin
 	system('adb shell "mkdir /sdcard/Recordings"')
+	record = system("adb shell screenrecord /sdcard/Recordings/recording0.mp4 --bit-rate 6000000 --rotate --time-limit 1")
+	spawn("adb pull /sdcard/Recordings/recording0.mp4 tmp/")
 
 	while true
 		i += 1
-		if (i >= 1)
+		if (i > 1)
 			spawn("adb pull /sdcard/Recordings/recording" + (i - 1).to_s + ".mp4 tmp/")
 		end
 		puts "New recording started"
@@ -20,12 +24,14 @@ begin
 	end
 rescue Interrupt
 	system("kill -2 " + record.pid.to_s)
-	system("adb pull /sdcard/Recordings/recording" + (i - 1).to_s + ".mp4 tmp/")
+	if (i >= 1)
+		system("adb pull /sdcard/Recordings/recording" + (i - 1).to_s + ".mp4 tmp/")
+	end
 	system("adb pull /sdcard/Recordings/recording" + i.to_s + ".mp4 tmp/")
 	j = 0
 	FileUtils.cd("tmp/")
 
-	while j <= i
+	while (j <= i)
 		puts "Joining media file..."
 		if (j == 0)
 			system("mp4box -new -cat recording" + j.to_s + ".mp4 ../Output/" + name + ".mp4")
@@ -38,6 +44,7 @@ rescue Interrupt
 
 	puts "Cleaning up..."
 	system('adb shell "rm -rf /sdcard/Recordings"')
+	system("rmdir ../tmp")
 
 	puts "Media files have been joined!"
 	puts "Success! Your media  file is in the Output folder!"

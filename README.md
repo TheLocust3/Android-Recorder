@@ -33,6 +33,10 @@ After you have completed the steps above just run the command:
 	ruby AndroidRecorder.rb
 ```
 
+Things to keep in mind:  
+	- You CANNOT rotate your screen  
+	- You must record for at least one second  
+	- This program do not record audio  
 
 Future Updates (Updates are listed in order of importance):  
 	- A way to record sound coming from your Android device  
@@ -42,10 +46,11 @@ Future Updates (Updates are listed in order of importance):
 	- Code cleanup  
 
 
-BUGS:
+BUGS:  
 	- You cannot rotate your Android device during the recording  
 	- The outputed media file will be upside down  
 	- There are slight glitches every 3 minutes do to recording restarting  
+	- You must record for at least 1 second for it to work  
 
 This program uses ADB distributed under Apache2.0 and is created Google Inc.  
 Find the license for ADB online here http://www.apache.org/licenses/LICENSE-2.0.html  
