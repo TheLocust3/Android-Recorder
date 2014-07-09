@@ -21,11 +21,19 @@ All operating systems with a linux kernal (UNTESTED)
 All operating systems with a unix-based kernal?  
 NOT WINDOWS (Sorry!)
 
-To use this script you must have ruby installed and the Android ADT bundle:  
+How To Run:  
 
-There are a million ways to install ruby so head over to https://www.ruby-lang.org/en/installation/ for details  
+Run the command:
+```
+	chmod +x install.sh
+```
 
-To get ADB download it from http://developer.android.com/sdk/index.html?hl=sk and follow the instructions to install it  
+Execute the scriptL
+```
+	./install.sh
+```
+  
+Install ADB from http://developer.android.com/sdk/index.html?hl=sk and follow the instructions to install it  
 ADB MUST be added to your path for this program to execute  
 
 After you have completed the steps above just run the command:  
