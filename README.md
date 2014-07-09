@@ -25,12 +25,12 @@ How To Run:
 
 Run the command:
 ```
-	chmod +x install.sh
+chmod +x install.sh
 ```
 
 Execute the scriptL
 ```
-	./install.sh
+./install.sh
 ```
   
 Install ADB from http://developer.android.com/sdk/index.html?hl=sk and follow the instructions to install it  
@@ -38,7 +38,7 @@ ADB MUST be added to your path for this program to execute
 
 After you have completed the steps above just run the command:  
 ```
-	ruby AndroidRecorder.rb
+ruby AndroidRecorder.rb
 ```
 
 Things to keep in mind:  
